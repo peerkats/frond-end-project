@@ -1,21 +1,17 @@
+// JavaScript
 
-
-
-
-
-function progressbar(classname){
-    window.addEventListener('scroll', function() {
-        const element = document.querySelector(classname);
-        const position = element.getBoundingClientRect();
-      
-        // check whether the element is in the viewport
-        if(position.top >= 0 && position.bottom <= window.innerHeight) {
-          element.classList.add('in-view');
-        } else {
-          element.classList.remove('in-view');
-        }
-      });
+function progressbar(classname) {
+    document.addEventListener("DOMContentLoaded", function() {
+        var observer = new IntersectionObserver(function(entries) {
+            if(entries[0].isIntersecting === true)
+                document.querySelector(classname).classList.add('in-view');
+            else
+                document.querySelector(classname).classList.remove('in-view');
+        }, { threshold: [0] });
+    
+        observer.observe(document.querySelector(classname));
+    });
 
 }
 
-progressbar('.experience');
+progressbar('.progress-bar');

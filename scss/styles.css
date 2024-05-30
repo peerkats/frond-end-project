@@ -82,50 +82,35 @@ html {
   text-align: center;
 }
 
-.contact-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
-  scale: 0.5;
-  background-color: #333;
-}
-
 .exbox {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10%;
-  scale: 0.5;
-  background-color: #333;
 }
 
-.experience {
+.Rust {
+  background-color: #ffffff;
   display: flex;
-  justify-content: start;
-  align-items: end;
-  background-color: rgb(83, 83, 83);
-  width: 10%;
-  height: 100%;
-  border-radius: 5px;
+  justify-content: center;
 }
-@keyframes fillUp {
+
+.progress-bar {
+  display: flex;
+  background-color: rgb(51, 253, 0);
+  justify-content: center;
+}
+.progress-bar p {
+  color: #333;
+  font-size: 2em;
+}
+
+@keyframes progress {
   0% {
     width: 0;
   }
   100% {
-    width: 70%;
+    width: 50%;
   }
 }
-.experience .progress-bar {
-  background-color: #4CAF50;
-  text-align: center;
-  line-height: 30px;
-  color: white;
-  align-self: flex-start;
-  width: 0;
-  border-radius: 5px;
-}
-.experience.in-view .progress-bar {
-  animation: fillUp 2s linear forwards;
+.progress-bar.in-view {
+  animation: progress 2s ease forwards;
 }/*# sourceMappingURL=styles.css.map */
