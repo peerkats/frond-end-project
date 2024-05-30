@@ -89,4 +89,43 @@ html {
   margin-top: 10%;
   scale: 0.5;
   background-color: #333;
+}
+
+.exbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  scale: 0.5;
+  background-color: #333;
+}
+
+.experience {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  background-color: rgb(83, 83, 83);
+  width: 10%;
+  height: 100%;
+  border-radius: 5px;
+}
+@keyframes fillUp {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.experience .progress-bar {
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  align-self: flex-start;
+  width: 0;
+  border-radius: 5px;
+}
+.experience.in-view .progress-bar {
+  animation: fillUp 2s linear forwards;
 }/*# sourceMappingURL=styles.css.map */
