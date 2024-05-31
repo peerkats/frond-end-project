@@ -15,3 +15,4 @@ function progressbar(classname) {
 }
 
 progressbar('.progress-bar');
+progressbar('.progress-bar1');

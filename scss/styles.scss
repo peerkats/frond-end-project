@@ -104,29 +104,45 @@ html {
 }
 
 .exbox {
-    display: flex;
-    justify-content: center;
+    background-color: #333;
+    margin-top: 10%;
+    h3{
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+
+    
 
  
 }
-@mixin progressbar($class1, $class2, $class3, $percentage){
+@mixin progressbar($class1, $class2, $class3, $percentage, $animation){
     .#{$class1} {
-        background-color: #ffffff;
+        
         display: flex;
         justify-content: center;
+        height: 10%;
+        background-color: #474747;
     }
     
     .#{$class2} {
         display: flex;
         background-color: rgb(51, 253, 0);
         justify-content: center;
+        
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 50px;
+        
         p{
+           
             color: #333;
             font-size: 2em;
         }
     }
     
-    @keyframes progress {
+    @keyframes #{$animation} {
         0% {
             width: 0;
         }
@@ -136,8 +152,9 @@ html {
     }
     
     .#{$class2}.#{$class3} {
-        animation: progress 2s ease forwards;
+        animation: #{$animation} 2s ease forwards;
     }
 }
 
-@include progressbar('Rust', 'progress-bar', 'in-view', '50%');
+@include progressbar('Rust', 'progress-bar', 'in-view', '50%', 'bam');
+@include progressbar('Rust1', 'progress-bar1', 'in-view', '10%', 'bim');
