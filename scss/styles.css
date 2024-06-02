@@ -10,7 +10,7 @@ html {
 }
 .navbar li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 3%;
 }
 .navbar li a {
   display: block;
@@ -22,7 +22,12 @@ html {
   background-color: #ddd;
 }
 
-.navbar:hover, .section1:hover, .section2:hover {
+.navbar:hover {
+  transform: scale(1.2);
+  transition: transform 2s ease;
+}
+
+.section1:hover, .section2:hover {
   transform: scale(1.2);
   transition: transform 2s ease;
 }
@@ -32,36 +37,19 @@ html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #ffeecb;
+  background-color: rgb(255, 218, 148);
 }
 .banner h1 {
-  color: #4169e1;
+  color: rgb(65, 105, 225);
   font-size: 3em;
 }
 
-.section2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  margin-top: 300px;
-  margin-left: 50%;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.section2 h3 {
-  color: #333;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-.section2 p {
-  color: #666;
-  font-size: 1.2em;
-  text-align: center;
+body {
+  background-color: #ffffff;
 }
 
 .section1 {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -82,33 +70,67 @@ html {
   text-align: center;
 }
 
-.exbox {
-  background-color: #333;
-  margin-top: 10%;
-}
-.exbox h3 {
+.section2 {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.section2 h3 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.section2 p {
+  color: #666;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-.Rust {
+.progress-container {
+  margin-top: 50%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.talk {
+  background-color: rgb(255, 218, 148);
   display: flex;
   justify-content: center;
-  height: 10%;
-  background-color: #474747;
+  margin: 20%;
+}
+
+.Rust, .progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .progress-bar {
-  display: flex;
-  background-color: rgb(51, 253, 0);
-  justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 50px;
+  background-color: aqua;
+  border-radius: 2rem;
 }
 .progress-bar p {
-  color: #333;
-  font-size: 2em;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.text {
+  width: 100%;
+}
+.text h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
 }
 
 @keyframes bam {
@@ -116,31 +138,37 @@ html {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 30%;
   }
 }
 .progress-bar.in-view {
   animation: bam 2s ease forwards;
 }
 
-.Rust1 {
+.Rust1, .progress-bar1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 10%;
-  background-color: #474747;
+  align-items: center;
 }
 
 .progress-bar1 {
-  display: flex;
-  background-color: rgb(51, 253, 0);
-  justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 50px;
+  background-color: aqua;
+  border-radius: 2rem;
 }
 .progress-bar1 p {
-  color: #333;
-  font-size: 2em;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.text1 {
+  width: 100%;
+}
+.text1 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
 }
 
 @keyframes bim {
@@ -148,9 +176,62 @@ html {
     width: 0;
   }
   100% {
-    width: 10%;
+    width: 50%;
   }
 }
 .progress-bar1.in-view {
   animation: bim 2s ease forwards;
+}
+
+.Rust2, .progress-bar2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar2 {
+  background-color: aqua;
+  border-radius: 2rem;
+}
+.progress-bar2 p {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.text2 {
+  width: 100%;
+}
+.text2 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+@keyframes bom {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.progress-bar2.in-view {
+  animation: bom 2s ease forwards;
+}
+
+@media (min-width: 768px) {
+  .text, .text1 {
+    width: 70%;
+  }
+}
+.contactinfo {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  flex-direction: column;
+  background-color: aqua;
+  margin-left: 0%;
+  margin-right: 0%;
 }/*# sourceMappingURL=styles.css.map */
