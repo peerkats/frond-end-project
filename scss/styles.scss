@@ -36,14 +36,15 @@ html {
 
 
 .section1:hover, .section2:hover {
-    transform: scale(1.2);
-    transition: transform 2s ease;
+    transform: scale(1.1);
+    transition: transform 1s ease;
     
 }
 
 .banner {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: $creamy-white;
@@ -52,32 +53,47 @@ html {
         color: $dark-soft-blue;
         font-size: 3em;
     }
+    div {
+        display: flex;
+        justify-content: space-between; // Added semicolon here
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+    img:hover {
+        transform: spin(360deg);
+        transition: transform 1s ease;
+    }
 }
+
+
 body{
     background-color: #ffffff;
 }
 
 
 
-.section1{
+.section1, .section2{
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    margin-right: 50%;
+    margin: 5%;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
+    
+    
     h3 {
-        color: #333;
+        color: #000000;
         font-size: 2em;
         margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
     }
 
     p {
-        color: #666;
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
         font-size: 1.2em;
         text-align: center;
     }
@@ -86,33 +102,7 @@ body{
 
 
 }
-.section2{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-    h3 {
-        color: #333;
-        font-size: 2em;
-        margin-bottom: 10px;
-    }
-
-    p {
-        color: #666;
-        font-size: 1.2em;
-        text-align: center;
-    }
-
-
-
-
-}
 
 
 .progress-container {
@@ -139,7 +129,7 @@ body{
         align-items: center;
     }
     .#{$class2}{
-        background-color: aqua;
+        background-color: rgb(30, 255, 0);
         border-radius: 2rem;
         p{
             font-size: 100%;
@@ -176,9 +166,9 @@ body{
     }
 }
 
-@include progressbar('Rust', 'progress-bar', 'in-view', '30%', 'bam', "text");
+@include progressbar('Rust', 'progress-bar', 'in-view', '50%', 'bam', "text");
 @include progressbar('Rust1', 'progress-bar1', 'in-view', '50%', 'bim', "text1");
-@include progressbar('Rust2', 'progress-bar2', 'in-view', '30%', 'bom', "text2" );
+@include progressbar('Rust2', 'progress-bar2', 'in-view', '50%', 'bom', "text2" );
 
 // Media query for larger screens
 @media (min-width: 768px) {
