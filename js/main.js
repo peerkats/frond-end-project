@@ -25,4 +25,9 @@ function progressbar(classname, id, target) {
 
 progressbar('.progress-bar', 'progress', 70);
 progressbar('.progress-bar1', 'progress1', 50);
-progressbar('.progress-bar2', 'progress2', 50); // corrected here
+progressbar('.progress-bar2', 'progress2', 50); 
+progressbar('.progress-bar3', 'progress3', 70);
+progressbar('.progress-bar4', 'progress4', 50);
+progressbar('.progress-bar5', 'progress5', 50);
+progressbar('.progress-bar6', 'progress6', 50);
+progressbar('.progress-bar7', 'progress7', 50);

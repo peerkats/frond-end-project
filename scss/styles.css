@@ -1,89 +1,167 @@
+* {
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
+header {
+  background-color: rgb(77, 77, 77);
+}
+
+.nav {
+  background-color: rgb(77, 77, 77);
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .navbar {
+  margin-top: 0;
   display: flex;
   justify-content: center;
   list-style: none;
+  position: fixed;
   padding: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(77, 77, 77);
 }
 .navbar li {
   display: inline-block;
-  margin-right: 3%;
+  margin: 1vh;
 }
 .navbar li a {
   display: block;
-  padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vh;
+  margin-top: 2vh;
 }
 .navbar li a:hover {
-  background-color: #ddd;
+  background-color: purple;
+  color: white;
 }
 
 .navbar:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 2s ease;
 }
 
-.section1:hover, .section2:hover {
-  transform: scale(1.1);
-  transition: transform 1s ease;
-}
-
 .banner {
+  height: 100vh;
+  background-color: #f8bcec;
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background-color: rgb(255, 218, 148);
+  border-width: 0;
+  margin-bottom: 20vh;
 }
 .banner h1 {
-  color: rgb(65, 105, 225);
-  font-size: 3em;
+  color: rgb(77, 77, 77);
+  font-size: 7vh;
 }
-.banner div {
-  display: flex;
-  justify-content: space-between;
-}
-.banner div img {
-  width: 50%;
-  height: 50%;
-}
-.banner img:hover {
-  transform: spin(360deg);
-  transition: transform 1s ease;
+.banner img {
+  width: 15vw;
+  height: auto;
 }
 
+@media screen and (max-width: 600px) {
+  .banner {
+    height: 100vh;
+  }
+  .banner img {
+    width: 30vw;
+    height: auto;
+  }
+  .about article p {
+    font-size: 2vh;
+  }
+  .about img {
+    width: 30vw;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .talk {
+    background-color: #f8bcec;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5vh;
+    border-radius: 5px;
+    color: rgb(77, 77, 77);
+  }
+  .talk h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 5vh;
+  }
+  .talk article {
+    margin: 2vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 10vh;
+    padding: 1vh;
+  }
+  .talk article p {
+    font-size: 2vh;
+  }
+  .talk article img {
+    width: 30vw;
+    height: auto;
+    float: center;
+  }
+}
 body {
-  background-color: #ffffff;
+  background-color: rgb(77, 77, 77);
+  margin: 0;
+  justify-content: center;
 }
 
-.section1, .section2 {
-  margin-top: 5%;
+.about {
+  margin-top: 30vh;
+  padding-top: 3vh;
+}
+.about h1 {
+  font-size: 5vh;
+  color: rgb(77, 77, 77);
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.section1 {
+  margin-top: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin: 5%;
-  padding: 20px;
+  margin: 5vh;
+  height: 150vh;
+  background-color: #f8bcec;
+  border-radius: 5px;
 }
-.section1 h3, .section2 h3 {
-  color: #000000;
-  font-size: 2em;
-  margin-bottom: 10px;
+.section1 article {
+  color: rgb(77, 77, 77);
   font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  margin: 1vh;
+  text-justify: inter-word;
+  line-height: 1.6;
 }
-.section1 p, .section2 p {
-  color: #000000;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-  text-align: center;
+
+.section1:hover, .section2:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease;
 }
 
 .progress-container {
+  padding-top: 6vh;
   margin-top: 50%;
   display: flex;
   width: 100%;
@@ -92,10 +170,33 @@ body {
 }
 
 .talk {
-  background-color: rgb(255, 218, 148);
+  background-color: #f8bcec;
   display: flex;
   justify-content: center;
-  margin: 20%;
+  flex-direction: column;
+  margin: 5vh;
+  border-radius: 5px;
+  color: rgb(77, 77, 77);
+}
+.talk h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 5vh;
+}
+.talk article {
+  margin: 2vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 10vh;
+  padding: 1vh;
+}
+.talk article p {
+  font-size: 3vh;
+}
+.talk article img {
+  width: 60vw;
+  height: auto;
+  float: center;
 }
 
 .Rust, .progress-bar {
@@ -106,12 +207,13 @@ body {
 }
 
 .progress-bar {
-  background-color: rgb(30, 255, 0);
-  border-radius: 2rem;
+  background-color: #f8bcec;
+  border-radius: 3rem;
 }
 .progress-bar p {
-  font-size: 100%;
+  font-size: 2vh;
   font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
 }
 
 .text {
@@ -121,19 +223,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
 }
 
-@keyframes bam {
+@keyframes bam1 {
   0% {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 40%;
   }
 }
 .progress-bar.in-view {
-  animation: bam 2s ease forwards;
+  animation: bam1 2s ease forwards;
 }
 
 .Rust1, .progress-bar1 {
@@ -144,12 +248,13 @@ body {
 }
 
 .progress-bar1 {
-  background-color: rgb(30, 255, 0);
-  border-radius: 2rem;
+  background-color: #f8bcec;
+  border-radius: 3rem;
 }
 .progress-bar1 p {
-  font-size: 100%;
+  font-size: 2vh;
   font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
 }
 
 .text1 {
@@ -159,19 +264,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
 }
 
-@keyframes bim {
+@keyframes bim2 {
   0% {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 30%;
   }
 }
 .progress-bar1.in-view {
-  animation: bim 2s ease forwards;
+  animation: bim2 2s ease forwards;
 }
 
 .Rust2, .progress-bar2 {
@@ -182,12 +289,13 @@ body {
 }
 
 .progress-bar2 {
-  background-color: rgb(30, 255, 0);
-  border-radius: 2rem;
+  background-color: #f8bcec;
+  border-radius: 3rem;
 }
 .progress-bar2 p {
-  font-size: 100%;
+  font-size: 2vh;
   font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
 }
 
 .text2 {
@@ -197,32 +305,264 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
 }
 
-@keyframes bom {
+@keyframes bom3 {
   0% {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 20%;
   }
 }
 .progress-bar2.in-view {
-  animation: bom 2s ease forwards;
+  animation: bom3 2s ease forwards;
 }
 
-@media (min-width: 768px) {
-  .text, .text1 {
-    width: 70%;
+.Rust3, .progress-bar3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar3 {
+  background-color: #f8bcec;
+  border-radius: 3rem;
+}
+.progress-bar3 p {
+  font-size: 2vh;
+  font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+.text3 {
+  width: 100%;
+}
+.text3 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
+}
+
+@keyframes bam4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
   }
 }
-.contactinfo {
+.progress-bar3.in-view {
+  animation: bam4 2s ease forwards;
+}
+
+.Rust4, .progress-bar4 {
   display: flex;
-  align-items: center;
-  margin-top: 5%;
   flex-direction: column;
-  background-color: aqua;
-  margin-left: 0%;
-  margin-right: 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar4 {
+  background-color: #f8bcec;
+  border-radius: 3rem;
+}
+.progress-bar4 p {
+  font-size: 2vh;
+  font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+.text4 {
+  width: 100%;
+}
+.text4 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
+}
+
+@keyframes bim5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.progress-bar4.in-view {
+  animation: bim5 2s ease forwards;
+}
+
+.Rust5, .progress-bar5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar5 {
+  background-color: #f8bcec;
+  border-radius: 3rem;
+}
+.progress-bar5 p {
+  font-size: 2vh;
+  font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+.text5 {
+  width: 100%;
+}
+.text5 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
+}
+
+@keyframes bom6 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+.progress-bar5.in-view {
+  animation: bom6 2s ease forwards;
+}
+
+.Rust6, .progress-bar6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar6 {
+  background-color: #f8bcec;
+  border-radius: 3rem;
+}
+.progress-bar6 p {
+  font-size: 2vh;
+  font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+.text4 {
+  width: 100%;
+}
+.text4 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
+}
+
+@keyframes bim7 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.progress-bar6.in-view {
+  animation: bim7 2s ease forwards;
+}
+
+.Rust7, .progress-bar7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar7 {
+  background-color: #f8bcec;
+  border-radius: 3rem;
+}
+.progress-bar7 p {
+  font-size: 2vh;
+  font-family: "Roboto", sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+.text5 {
+  width: 100%;
+}
+.text5 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  font-family: "Roboto", sans-serif;
+  color: #f8bcec;
+}
+
+@keyframes bom8 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+.progress-bar7.in-view {
+  animation: bom8 2s ease forwards;
+}
+
+footer {
+  margin-top: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+footer .contact {
+  background-color: #f8bcec;
+  height: 90vh;
+  font-size: 2vh;
+  padding-top: 11vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+footer .contact h1 {
+  margin-top: 5vh;
+  font-size: 5vh;
+  color: rgb(77, 77, 77);
+  font-family: "Roboto", sans-serif;
+}
+footer .contact li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+footer .contact li a {
+  margin-top: 2vh;
+  color: rgb(77, 77, 77);
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+footer .contact li a:hover {
+  scale: 1.1;
+}
+footer .contact li img {
+  width: auto;
+  height: 10vh;
 }/*# sourceMappingURL=styles.css.map */
